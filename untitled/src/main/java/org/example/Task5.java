@@ -27,11 +27,8 @@ public class Task5 {
         arr[9] = 78;
 
         System.out.println(Arrays.toString(Arrays.stream(arr).toArray()));
-        //List<Integer> list = new ArrayList<>();
         HashMap<Integer, Integer> countIndexMap = new HashMap<>();
-        int index = 0;
         int count = 0;
-        int prev = 0;
         for (int i = 0; i < arr.length; i++) {
             if (i == arr.length - 1) {
                 if (arr[i] == arr[i - 1] && count != 0) {
@@ -53,26 +50,6 @@ public class Task5 {
         Optional<Integer> maxIndex = countIndexMap.values().stream()
                 .max(Integer::compareTo);
         System.out.println(maxIndex);
-//        System.out.println(index);
-//        System.out.println(list);
         System.out.println(countIndexMap);
     }
-//if (i < arr.length - 1) {
-////                if (arr[i] != arr[i + 1] && count != 0) {
-//        if (((arr[i] != arr[i + 1])) && count != 0) {
-//            index = i;
-//        } else {
-//            count++;
-//        }
-//
-//        if (arr[i] == arr[i + 1]) {
-//            count++;
-//        } else {
-//            count = 0;
-//        }
-//        if(count!= 0){
-//            list.add(index);
-//            countIndexMap.put(index, count);
-//        }
-//    }
 }
